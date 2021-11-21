@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Github+hexo 网站搭建 - 吾日心悦如石水的主页</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="吾日心悦如石水,"> 
+    <meta name="description" content="&amp;emsp;&amp;ensp;  这个是我在网络上学习博客搭建而编写的教程，在这里我非常的感谢b站的 CoolPlayer-函博，视频搬运崽啊 和CSDN社区的大佬们。
+
+
+前言使用github page,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="吾日心悦如石水的主页" type="application/atom+xml"> 
+    <link rel="icon" href="/blog/img/long.ico"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/blog/css/diaspora.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">吾日心悦如石水的主页</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://wrxinyue.github.io/blog"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Github+hexo 网站搭建</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Github+hexo 网站搭建</h1>
+        <div class="stuff">
+            <span>十一月 19, 2021</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/blog/tags/Github/" rel="tag">Github</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/blog/tags/blog/" rel="tag">blog</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/blog/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>&emsp;&ensp;  这个是我在网络上学习博客搭建而编写的教程，在这里我非常的感谢b站的 <a target="_blank" rel="noopener" href="https://space.bilibili.com/350090479?spm_id_from=333.788.b_765f7570696e666f.1">CoolPlayer-函博</a>，<a target="_blank" rel="noopener" href="https://space.bilibili.com/441519471?spm_id_from=333.788.b_765f7570696e666f.2">视频搬运崽啊</a> 和CSDN社区的大佬们。</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用github pages服务搭建博客的好处有：</p>
+<blockquote>
+<ul>
+<li>全是静态文件，访问速度快；</li>
+<li>免费方便，免费搭建个人博客，不需要服务器不需要后台；</li>
+<li>可以随意绑定自己的域名；</li>
+<li>数据绝对安全，基于github的版本管理，可以恢复历史版本；</li>
+<li>博客内容可以轻松打包、转移、发布或分享到其它平台；</li>
+<li>…….</li>
+</ul>
+</blockquote>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>注册 <a target="_blank" rel="noopener" href="https://github.com/">github账号</a><br>安装node.js、npm、git</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>输入以上指令检查软件是否安装，如果有错误请自行<a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a>查找原因</p>
+<p>本文所使用的环境：</p>
+<blockquote>
+<p>Windiws 10<br>node 16.13.0<br>npm 8.1.0<br>git 2.34.0</p>
+</blockquote>
+<h2 id="搭建github博客"><a href="#搭建github博客" class="headerlink" title="搭建github博客"></a>搭建github博客</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个名为 <font color=red>你的用户名.github.io</font> 的仓库(必须是你的用户名，其他名称无效)，建立之后你的网站访问地址就是http://你的用户名.github.io。<br>每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>如果想要你的域名更个性一点，拥有自己的域名那就看看这一步吧:</p>
+<p>首先注册一个域名，域名选择一定要选个大公司，在这里我推荐去<a target="_blank" rel="noopener" href="https://sg.godaddy.com/zh/offers/domain?isc=gennbacn01&countryview=1&currencyType=CNY&utm_source=baidu&utm_medium=cpc&utm_term=Title&utm_campaign=zh-cn_corp-core_sem_bh_b_z_001&utm_content=Brandzone%20PC">godaddy</a> ,或者国内的<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">阿里云</a> 。</p>
+<p>域名分为两种：带WWW的和不带WWW的。</p>
+<p>域名配置最常见的方式：<br>1.记录类型分别填CNAME和A。<br>2.CNAME填写域名。<br>3.A记录值填写你的<font color=red>你的用户名.github.io</font>的网址IP。</p>
+<blockquote>
+<p>由于不带www方式只能采用A记录，所以必须先ping一下 <font color=red>你的用户名.github.io</font> 的IP，将ping出来的ip填入A记录值，这样才能保证无论是否添加www都可以访问。</p>
+</blockquote>
+<p>4.在你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好。</p>
+<blockquote>
+<ul>
+<li>如果你填写的是没有www的，比如 mygit.me，那么无论是访问 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a> 还是 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，都会自动跳转到 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a></li>
+<li>如果你填写的是带www的，比如 <a target="_blank" rel="noopener" href="http://www.mygit.me/">www.mygit.me</a> ，那么无论是访问 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a> 还是 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，都会自动跳转到 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a></li>
+<li>如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a> 没问题，但是访问 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，不会自动跳转到 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a></li>
+</ul>
+</blockquote>
+<p>5.绑定新域名之后，原来的<font color=red>你的用户名.github.io</font>并没有失效，而是会自动跳转到你的新域名。</p>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><p>提交代码需要你的github权限，直接使用用户名和密码不安全，在这里我们我们使用ssh key来解决本地和服务器的连接问题。</p>
+<p>用git bash执行如下命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global <span class="comment">#user.name &quot;git用户名&quot;或邮箱地址 </span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">$ ls</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="comment">#&quot;邮箱地址&quot; 连续回车三次</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim id_rsa.pub</span><br><span class="line">：wq</span><br><span class="line">$ ssh -T git@github.com    <span class="comment">#查看安装成功</span></span><br></pre></td></tr></table></figure>
+
+<p>查看公钥：cat id_rsa.pub 或者vim id_rsa.pub</p>
+<p>复制 id_rsa.pub文件内容到githubkey里add就可以了</p>
+<blockquote>
+<p>打开github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key<br>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
+</blockquote>
+<h3 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com <span class="comment"># 注意邮箱地址不用改</span></span><br></pre></td></tr></table></figure>
+
+<p>如果提示 Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：</p>
+<blockquote>
+<p>Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>看到这个信息说明SSH已配置成功。</p>
+<p>此时你还需要配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;liuxianan&quot;</span>// 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  <span class="string">&quot;xxx@qq.com&quot;</span>// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<p>作用是执行hexo d操作后上传源代码</p>
+<h2 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h2><h3 id="hexo介绍"><a href="#hexo介绍" class="headerlink" title="hexo介绍"></a>hexo介绍</h3><p><a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a>是一个简单、快速、强大的基于 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Github</a> Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>github pages存放的是静态文件，blog存放不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，所以hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑建立名为name的文件夹，比如我的是 <font color=red>D:\Workspaces\blog</font> 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /D/Workspaces/blog/</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+<p>hexo会自动下载一些文件到这个目录，包括node_modules</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment"># 生成</span></span><br><span class="line">$ hexo s <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
+
+<p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s <span class="comment">#开启本地预览服务</span></span><br></pre></td></tr></table></figure>
+
+<p>浏览器打开<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到篇名为 Hello World 的文章，如果浏览器一直加载不出来可能是因为端口占用的缘故。</p>
+<blockquote>
+<p>解决端口冲突问题请参考这篇文章：<br><a target="_blank" rel="noopener" href="http://blog.liuxianan.com/windows-port-bind.html">http://blog.liuxianan.com/windows-port-bind.html</a></p>
+</blockquote>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>默认主题很丑，我们首先替换一个好看点的主题。这是<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官方主题</a> 。</p>
+<p>我们以<a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题为例:</p>
+<p>首先下载这个主题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /f/Workspaces/hexo/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p>下载主题在 <font color=red>D:\Workspaces\blog\themes</font> 文件夹里。</p>
+<p>修改<font color=red>_config.yml</font>中的<font color=red>theme: landscape</font>改为<font color=red>theme: yilia</font>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean <span class="comment">#清理public文件夹</span></span><br><span class="line">$ hexo g <span class="comment">#重新生成</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>虽然github有版本管理，但备份一下总是好的（以防万一）</p>
+<h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>配置 <font color=red>_config.yml</font> 中有关deploy的部分:</p>
+<p>正确写法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>错误写法：<br>deploy:<br>  type: github<br>  repository: <a target="_blank" rel="noopener" href="https://github.com/liuxianan/liuxianan.github.io.git">https://github.com/liuxianan/liuxianan.github.io.git</a><br>  branch: master</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">安装插件：</span><br><span class="line"></span><br><span class="line">~~~ bash</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>没有安装此插件会报以下错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not found: github 或 Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git bash <span class="comment">#部署</span></span><br></pre></td></tr></table></figure>
+
+<p>部署这个命令一定要用git bash，否则会提示 <font color=red>Permission denied (publickey). </font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d <span class="comment">#上传</span></span><br></pre></td></tr></table></figure>
+
+<p>将本次有改动的代码全部提交，没有改动的不会</p>
+<h3 id="保留CNAME、README-md等文件"><a href="#保留CNAME、README-md等文件" class="headerlink" title="保留CNAME、README.md等文件"></a>保留CNAME、README.md等文件</h3><p>提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录。</p>
+<p>hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。</p>
+<h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><p>常见命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<p>缩写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>组合命令；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>可以在 _config.yml 中修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"><span class="comment"># Site 站点配置</span></span><br><span class="line">title: Hexo-demo <span class="comment">#网站标题</span></span><br><span class="line">subtitle: hexo is simple and easy to study <span class="comment">#网站副标题</span></span><br><span class="line">description: this is hexo-demo <span class="comment">#网栈描述</span></span><br><span class="line">author: pomy <span class="comment">#你的名字</span></span><br><span class="line">language: zh-CN <span class="comment">#网站使用的语言</span></span><br><span class="line">timezone: Asia/Shanghai <span class="comment">#网站时区</span></span><br><span class="line"><span class="comment"># URL #可以不用配置</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">url: http://yoursite.com <span class="comment">#网址，搜索时会在搜索引擎中显示</span></span><br><span class="line">root: / <span class="comment">#网站根目录</span></span><br><span class="line">permalink: :year/:month/:day/:title/ <span class="comment">#永久链接格式</span></span><br><span class="line">permalink_defaults: <span class="comment">#永久链接中各部分的默认值</span></span><br><span class="line"><span class="comment"># Directory 目录配置</span></span><br><span class="line">source_dir: <span class="built_in">source</span> <span class="comment">#资源文件夹，这个文件夹用来存放内容</span></span><br><span class="line">public_dir: public <span class="comment">#公共文件夹，这个文件夹用于存放生成的站点文件</span></span><br><span class="line">tag_dir: tags <span class="comment">#标签文件夹</span></span><br><span class="line">archive_dir: archives <span class="comment">#归档文件夹</span></span><br><span class="line">category_dir: categories <span class="comment">#分类文件夹</span></span><br><span class="line">code_dir: downloads/code <span class="comment">#Include code 文件夹</span></span><br><span class="line">i18n_dir: :lang <span class="comment">#国际化文件夹</span></span><br><span class="line">skip_render: <span class="comment">#跳过指定文件的渲染，您可使用 glob 来配置路径</span></span><br><span class="line"><span class="comment"># Writing 写作配置</span></span><br><span class="line">new_post_name: :title.md <span class="comment"># 新文章的文件名称</span></span><br><span class="line">default_layout: post <span class="comment">#默认布局</span></span><br><span class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line">filename_case: 0 <span class="comment">#把文件名称转换为 (1) 小写或 (2) 大写</span></span><br><span class="line">render_drafts: <span class="literal">false</span> <span class="comment">#显示草稿</span></span><br><span class="line">post_asset_folder: <span class="literal">false</span> <span class="comment">#是否启动资源文件夹</span></span><br><span class="line">relative_link: <span class="literal">false</span> <span class="comment">#把链接改为与根目录的相对位址</span></span><br><span class="line">future: <span class="literal">true</span></span><br><span class="line">highlight: <span class="comment">#代码块的设置</span></span><br><span class="line"><span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">line_number: <span class="literal">true</span></span><br><span class="line">auto_detect: <span class="literal">true</span></span><br><span class="line">tab_replace:</span><br><span class="line"><span class="comment"># Category &amp; Tag 分类 &amp; 标签</span></span><br><span class="line">default_category: uncategorized <span class="comment">#默认分类</span></span><br><span class="line">category_map: <span class="comment">#分类别名</span></span><br><span class="line">tag_map: <span class="comment">#标签别名</span></span><br><span class="line"><span class="comment"># Date / Time format 时间和日期</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"><span class="comment"># Pagination 分页</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">per_page: 10 <span class="comment">#每页显示的文章量 (0 = 关闭分页功能)</span></span><br><span class="line">pagination_dir: page <span class="comment">#分页目录</span></span><br><span class="line"><span class="comment"># Extensions 扩展</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/ 插件</span></span><br><span class="line"><span class="comment">## Themes: http://hexo.io/themes/ 主题</span></span><br><span class="line">theme: landscape <span class="comment">#当前主题名称</span></span><br><span class="line"><span class="comment"># Deployment #部署到github</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line"><span class="built_in">type</span>:</span><br></pre></td></tr></table></figure>
+
+<p>一般主题下有一个 languages 文件夹，用于对应 language 配置项。比如在 ejs 中有：</p>
+<p>&lt;%= __(‘tags’) %&gt;</p>
+<p>language 的配置项是 zh-CN ，则会在 languages 文件夹下找到 zh-CN.yml 文件中对应的项来解释。</p>
+<p>修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。</p>
+<h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&#x27;my-first-blog&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>hexo会帮我们在<font color=red>_posts</font>下生成相关md文件</p>
+<p>我们只需要打开这个文件就可以开始写博客了，默认生成如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: my-first-blog</span><br><span class="line">date: 2021-11-19 10:40:00</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。</p>
+<p>一般完整格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName <span class="comment">#文章页面上的显示名称，一般是中文</span></span><br><span class="line">date: 2013-12-02 15:30:16 <span class="comment">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line">categories: 默认分类 <span class="comment">#分类</span></span><br><span class="line">tags: [tag1,tag2,tag3] <span class="comment">#文章标签，可空，多标签请用格式，注意:后面有个空格</span></span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;my-second-blog&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><font color=red>hexo new page ‘postName’</font>命令和<font color=red>hexo new ‘postName’</font>区别:</p>
+<p>最终部署时生成：blog\public\my-second-blog\index.html，但是它不会作为文章出现在博文目录。</p>
+<h3 id="如何让博文列表不显示全部内容"><a href="#如何让博文列表不显示全部内容" class="headerlink" title="如何让博文列表不显示全部内容"></a>如何让博文列表不显示全部内容</h3><p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
+<p>答案：是在合适的位置加上<!--more-->即可，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">这个是我在网络上学习的Github+hexo搭建的网站，在这里我非常的感谢b站的 [CoolPlayer-函博](https://space.bilibili.com/350090479?spm_id_from=333.788.b_765f7570696e666f.1)，[视频搬运崽啊](https://space.bilibili.com/441519471?spm_id_from=333.788.b_765f7570696e666f.2) 和CSDN社区的大佬们。</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">## 前言</span></span><br><span class="line">使用github pages服务搭建博客的好处有：</span><br><span class="line"></span><br><span class="line">&gt;* 全是静态文件，访问速度快；</span><br><span class="line">&gt;* 免费方便，免费搭建个人博客，不需要服务器不需要后台；</span><br><span class="line">&gt;* 可以随意绑定自己的域名；</span><br><span class="line">&gt;* 数据绝对安全，基于github的版本管理，可以恢复历史版本；</span><br><span class="line">&gt;* 博客内容可以轻松打包、转移、发布或分享到其它平台；</span><br><span class="line">&gt;* .......</span><br></pre></td></tr></table></figure>
+
+<h3 id="Custom-404页面"><a href="#Custom-404页面" class="headerlink" title="Custom 404页面"></a>Custom 404页面</h3><p>在blog/source目录下创建404.html</p>
+<p>404.html的内容可以设置为下面的内容 _config.yml中的permalink_defaults属性不需要修改）.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: default</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">         &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span><br><span class="line">         &lt;title&gt;404&lt;/title&gt;                                                                                                                                        </span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">         &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;http://www.qq.com/404/search_children.js&quot;</span> charset=<span class="string">&quot;utf-8&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>简化:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;http://www.qq.com/404/search_children.js&quot;</span> charset=<span class="string">&quot;utf-8&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>在md 文件中写中文内容，发布出来后为乱码，原因是md的编码不对，将md文件另存为“UTF-8”编码的文件即可解决问题。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/492390949.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci='ebda352ad83493717804'
+        data-cs='33fc1ccf93253f9e5be192d103b2a09a6b461dd8'
+        data-r='WRXinYue.github.io'
+        data-o='WRXinYue'
+        data-a='WRXinYue'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">准备工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2"><span class="toc-number">2.</span> <span class="toc-text">搭建github博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-number">2.2.</span> <span class="toc-text">绑定域名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESSH-key"><span class="toc-number">3.</span> <span class="toc-text">配置SSH key</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">3.1.</span> <span class="toc-text">测试是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="toc-number">4.</span> <span class="toc-text">使用hexo写博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.1.</span> <span class="toc-text">hexo介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">4.2.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">4.3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">4.4.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="toc-number">4.5.</span> <span class="toc-text">修改主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD"><span class="toc-number">4.6.</span> <span class="toc-text">备份</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0github"><span class="toc-number">4.7.</span> <span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E7%95%99CNAME%E3%80%81README-md%E7%AD%89%E6%96%87%E4%BB%B6"><span class="toc-number">4.8.</span> <span class="toc-text">保留CNAME、README.md等文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">常用hexo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-yml"><span class="toc-number">5.1.</span> <span class="toc-text">_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0"><span class="toc-number">5.2.</span> <span class="toc-text">新建博客文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A9%E5%8D%9A%E6%96%87%E5%88%97%E8%A1%A8%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9"><span class="toc-number">5.3.</span> <span class="toc-text">如何让博文列表不显示全部内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-404%E9%A1%B5%E9%9D%A2"><span class="toc-number">5.4.</span> <span class="toc-text">Custom 404页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">6.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="toc-number">6.1.</span> <span class="toc-text">中文乱码</span></a></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/blog/js/plugin.js"></script>
+<script src="/blog/js/typed.js"></script>
+<script src="/blog/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/blog/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/blog/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/blog/photoswipe/photoswipe.min.js"></script>
+<script src="/blog/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
