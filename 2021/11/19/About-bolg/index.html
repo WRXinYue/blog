@@ -31,7 +31,7 @@
     <div id="single">
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
-    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://wrxinyue.github.io/blog"></a>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://github.com/WRXinYue/blog.git"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
     <h3 class="subtitle">Github+hexo 网站搭建</h3>
     <div class="social">
@@ -71,7 +71,7 @@
 <li>…….</li>
 </ul>
 </blockquote>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>注册 <a target="_blank" rel="noopener" href="https://github.com/">github账号</a><br>安装node.js、npm、git</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>注册 <a href="https://github.com/">github账号</a><br>安装node.js、npm、git</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
 <p>输入以上指令检查软件是否安装，如果有错误请自行<a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a>查找原因</p>
@@ -79,13 +79,13 @@
 <blockquote>
 <p>Windiws 10<br>node 16.13.0<br>npm 8.1.0<br>git 2.34.0</p>
 </blockquote>
-<h2 id="搭建github博客"><a href="#搭建github博客" class="headerlink" title="搭建github博客"></a>搭建github博客</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个名为 <font color=red>你的用户名.github.io</font> 的仓库(必须是你的用户名，其他名称无效)，建立之后你的网站访问地址就是http://你的用户名.github.io。<br>每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
+<h2 id="搭建github博客"><a href="#搭建github博客" class="headerlink" title="搭建github博客"></a>搭建github博客</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个名为 <font color="red">你的用户名.github.io</font> 的仓库(必须是你的用户名，其他名称无效)，建立之后你的网站访问地址就是http://你的用户名.github.io。<br>每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
 <h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>如果想要你的域名更个性一点，拥有自己的域名那就看看这一步吧:</p>
 <p>首先注册一个域名，域名选择一定要选个大公司，在这里我推荐去<a target="_blank" rel="noopener" href="https://sg.godaddy.com/zh/offers/domain?isc=gennbacn01&countryview=1&currencyType=CNY&utm_source=baidu&utm_medium=cpc&utm_term=Title&utm_campaign=zh-cn_corp-core_sem_bh_b_z_001&utm_content=Brandzone%20PC">godaddy</a> ,或者国内的<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">阿里云</a> 。</p>
 <p>域名分为两种：带WWW的和不带WWW的。</p>
-<p>域名配置最常见的方式：<br>1.记录类型分别填CNAME和A。<br>2.CNAME填写域名。<br>3.A记录值填写你的<font color=red>你的用户名.github.io</font>的网址IP。</p>
+<p>域名配置最常见的方式：<br>1.记录类型分别填CNAME和A。<br>2.CNAME填写域名。<br>3.A记录值填写你的<font color="red">你的用户名.github.io</font>的网址IP。</p>
 <blockquote>
-<p>由于不带www方式只能采用A记录，所以必须先ping一下 <font color=red>你的用户名.github.io</font> 的IP，将ping出来的ip填入A记录值，这样才能保证无论是否添加www都可以访问。</p>
+<p>由于不带www方式只能采用A记录，所以必须先ping一下 <font color="red">你的用户名.github.io</font> 的IP，将ping出来的ip填入A记录值，这样才能保证无论是否添加www都可以访问。</p>
 </blockquote>
 <p>4.在你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好。</p>
 <blockquote>
@@ -95,7 +95,7 @@
 <li>如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a> 没问题，但是访问 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，不会自动跳转到 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a></li>
 </ul>
 </blockquote>
-<p>5.绑定新域名之后，原来的<font color=red>你的用户名.github.io</font>并没有失效，而是会自动跳转到你的新域名。</p>
+<p>5.绑定新域名之后，原来的<font color="red">你的用户名.github.io</font>并没有失效，而是会自动跳转到你的新域名。</p>
 <h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><p>提交代码需要你的github权限，直接使用用户名和密码不安全，在这里我们我们使用ssh key来解决本地和服务器的连接问题。</p>
 <p>用git bash执行如下命令:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global <span class="comment">#user.name &quot;git用户名&quot;或邮箱地址 </span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">$ ls</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="comment">#&quot;邮箱地址&quot; 连续回车三次</span></span><br></pre></td></tr></table></figure>
@@ -118,11 +118,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;liuxianan&quot;</span>// 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  <span class="string">&quot;xxx@qq.com&quot;</span>// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
 
 <p>作用是执行hexo d操作后上传源代码</p>
-<h2 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h2><h3 id="hexo介绍"><a href="#hexo介绍" class="headerlink" title="hexo介绍"></a>hexo介绍</h3><p><a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a>是一个简单、快速、强大的基于 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Github</a> Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<h2 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h2><h3 id="hexo介绍"><a href="#hexo介绍" class="headerlink" title="hexo介绍"></a>hexo介绍</h3><p><a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a>是一个简单、快速、强大的基于 <a href="https://github.com/hexojs/hexo">Github</a> Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>github pages存放的是静态文件，blog存放不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，所以hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
 
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑建立名为name的文件夹，比如我的是 <font color=red>D:\Workspaces\blog</font> 。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑建立名为name的文件夹，比如我的是 <font color="red">D:\Workspaces\blog</font> 。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /D/Workspaces/blog/</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 
 <p>hexo会自动下载一些文件到这个目录，包括node_modules</p>
@@ -136,20 +136,20 @@
 <p>解决端口冲突问题请参考这篇文章：<br><a target="_blank" rel="noopener" href="http://blog.liuxianan.com/windows-port-bind.html">http://blog.liuxianan.com/windows-port-bind.html</a></p>
 </blockquote>
 <h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>默认主题很丑，我们首先替换一个好看点的主题。这是<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官方主题</a> 。</p>
-<p>我们以<a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题为例:</p>
+<p>我们以<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题为例:</p>
 <p>首先下载这个主题：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /f/Workspaces/hexo/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
-<p>下载主题在 <font color=red>D:\Workspaces\blog\themes</font> 文件夹里。</p>
-<p>修改<font color=red>_config.yml</font>中的<font color=red>theme: landscape</font>改为<font color=red>theme: yilia</font>。</p>
+<p>下载主题在 <font color="red">D:\Workspaces\blog\themes</font> 文件夹里。</p>
+<p>修改<font color="red">_config.yml</font>中的<font color="red">theme: landscape</font>改为<font color="red">theme: yilia</font>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean <span class="comment">#清理public文件夹</span></span><br><span class="line">$ hexo g <span class="comment">#重新生成</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>虽然github有版本管理，但备份一下总是好的（以防万一）</p>
-<h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>配置 <font color=red>_config.yml</font> 中有关deploy的部分:</p>
+<h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>配置 <font color="red">_config.yml</font> 中有关deploy的部分:</p>
 <p>正确写法：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<p>错误写法：<br>deploy:<br>  type: github<br>  repository: <a target="_blank" rel="noopener" href="https://github.com/liuxianan/liuxianan.github.io.git">https://github.com/liuxianan/liuxianan.github.io.git</a><br>  branch: master</p>
+<p>错误写法：<br>deploy:<br>  type: github<br>  repository: <a href="https://github.com/liuxianan/liuxianan.github.io.git">https://github.com/liuxianan/liuxianan.github.io.git</a><br>  branch: master</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">安装插件：</span><br><span class="line"></span><br><span class="line">~~~ bash</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>没有安装此插件会报以下错误：</p>
@@ -157,7 +157,7 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git bash <span class="comment">#部署</span></span><br></pre></td></tr></table></figure>
 
-<p>部署这个命令一定要用git bash，否则会提示 <font color=red>Permission denied (publickey). </font></p>
+<p>部署这个命令一定要用git bash，否则会提示 <font color="red">Permission denied (publickey). </font></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d <span class="comment">#上传</span></span><br></pre></td></tr></table></figure>
 
 <p>将本次有改动的代码全部提交，没有改动的不会</p>
@@ -181,7 +181,7 @@
 <p>修改全局配置时，注意缩进，同时注意冒号后面要有一个空格。</p>
 <h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&#x27;my-first-blog&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>hexo会帮我们在<font color=red>_posts</font>下生成相关md文件</p>
+<p>hexo会帮我们在<font color="red">_posts</font>下生成相关md文件</p>
 <p>我们只需要打开这个文件就可以开始写博客了，默认生成如下内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: my-first-blog</span><br><span class="line">date: 2021-11-19 10:40:00</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
@@ -191,7 +191,7 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;my-second-blog&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><font color=red>hexo new page ‘postName’</font>命令和<font color=red>hexo new ‘postName’</font>区别:</p>
+<p><font color="red">hexo new page ‘postName’</font>命令和<font color="red">hexo new ‘postName’</font>区别:</p>
 <p>最终部署时生成：blog\public\my-second-blog\index.html，但是它不会作为文章出现在博文目录。</p>
 <h3 id="如何让博文列表不显示全部内容"><a href="#如何让博文列表不显示全部内容" class="headerlink" title="如何让博文列表不显示全部内容"></a>如何让博文列表不显示全部内容</h3><p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
 <p>答案：是在合适的位置加上<!--more-->即可，例如：</p>
