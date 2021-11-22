@@ -1,79 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Google Analytics分析（GA）</title>
-    <url>/blog/2021/11/20/About-GA/</url>
-    <content><![CDATA[<h2 id="关于Google-Analytics"><a href="#关于Google-Analytics" class="headerlink" title="关于Google Analytics"></a>关于<a href="https://analytics.google.com/">Google Analytics</a></h2><p>Google Analytics简称 GA，是 Google 公司提供的数据分析工具，可用来分析网站或 APP 的数据状况。</p>
-<h2 id="Google-Analytics的简要说明："><a href="#Google-Analytics的简要说明：" class="headerlink" title="Google Analytics的简要说明："></a><a href="https://analytics.google.com/">Google Analytics</a>的简要说明：</h2><blockquote>
-<p>1.使用您的Google帐户登录Google Analytics；</p>
-</blockquote>
-<blockquote>
-<p>2.单击仪表板左下侧栏上的“管理”按钮；</p>
-</blockquote>
-<blockquote>
-<p>3.选择一个帐户或创建一个帐户；</p>
-</blockquote>
-<blockquote>
-<p>4.单击下拉菜单以创建属性；</p>
-</blockquote>
-<blockquote>
-<p>5.单击“网站”并添加您的站点名称和URL；</p>
-</blockquote>
-<blockquote>
-<p>6.选择您的行业；</p>
-</blockquote>
-<blockquote>
-<p>7.选择您的时区；</p>
-</blockquote>
-<blockquote>
-<p>8.单击获取跟踪ID；</p>
-</blockquote>
-<blockquote>
-<p>9.在您的网站上安装跟踪ID；</p>
-</blockquote>
-<h2 id="Google-Analytics术语介绍："><a href="#Google-Analytics术语介绍：" class="headerlink" title="Google Analytics术语介绍："></a><a href="https://analytics.google.com/">Google Analytics</a>术语介绍：</h2><blockquote>
-<p>1、帐户（Account ）-每个属性都位于仪表板中。 您可以在一个帐户中设置多个属性，也可以为不同的属性设置多个帐户。</p>
-</blockquote>
-<blockquote>
-<p>2、属性（Property）-你要追踪的网站或移动应用程序。</p>
-</blockquote>
-<blockquote>
-<p>3、id跟踪（Tracking ID） – 添加到您网站的唯一代码，允许Google Analytics跟踪它。</p>
-</blockquote>
-<blockquote>
-<p>4、转化（Conversion） – 访问转变为客户或潜在客户。</p>
-</blockquote>
-<blockquote>
-<p>5、渠道/流量来源（Channel/Traffic source ） – 显示您的流量来自哪里，例如来自其他网站，搜索引擎，社交媒体和电子邮件的推荐或链接。</p>
-</blockquote>
-<blockquote>
-<p>6、会话持续时间（Session duration ） – 访问者在您网站上停留的时长。</p>
-</blockquote>
-<blockquote>
-<p>7、跳出率（Bounce rate） – 仅查看单个页面然后离开的访问者百分比。</p>
-</blockquote>
-<blockquote>
-<p>8、事件（Event ）-特定访问者行为，例如访问者点击广告，观看或停止视频，下载文件等。</p>
-</blockquote>
-<blockquote>
-<p>9、着陆页（Landing page） – 访问者访问您网站时看到的第一页。</p>
-</blockquote>
-<blockquote>
-<p>10、自然搜索（Organic search ） – 通过搜索结果页面上的链接访问您网站的访问者。</p>
-</blockquote>
-<blockquote>
-<p>11、细分（Segment） – 一种过滤数据的方法，例如按访客的类别和类型。</p>
-</blockquote>
-<p>文章摘录于：<a href="https://www.idcspy.net/google-analytics">https://www.idcspy.net/google-analytics</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>Google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github+hexo 网站搭建</title>
     <url>/blog/2021/11/19/About-bolg/</url>
     <content><![CDATA[<p>&emsp;&ensp;  这个是我在网络上学习博客搭建而编写的教程，在这里我非常的感谢b站的 <a href="https://space.bilibili.com/350090479?spm_id_from=333.788.b_765f7570696e666f.1">CoolPlayer-函博</a>，<a href="https://space.bilibili.com/441519471?spm_id_from=333.788.b_765f7570696e666f.2">视频搬运崽啊</a> 和CSDN社区的大佬们。</p>
@@ -236,6 +163,79 @@
       </tags>
   </entry>
   <entry>
+    <title>Google Analytics分析（GA）</title>
+    <url>/blog/2021/11/20/About-GA/</url>
+    <content><![CDATA[<h2 id="关于Google-Analytics"><a href="#关于Google-Analytics" class="headerlink" title="关于Google Analytics"></a>关于<a href="https://analytics.google.com/">Google Analytics</a></h2><p>Google Analytics简称 GA，是 Google 公司提供的数据分析工具，可用来分析网站或 APP 的数据状况。</p>
+<h2 id="Google-Analytics的简要说明："><a href="#Google-Analytics的简要说明：" class="headerlink" title="Google Analytics的简要说明："></a><a href="https://analytics.google.com/">Google Analytics</a>的简要说明：</h2><blockquote>
+<p>1.使用您的Google帐户登录Google Analytics；</p>
+</blockquote>
+<blockquote>
+<p>2.单击仪表板左下侧栏上的“管理”按钮；</p>
+</blockquote>
+<blockquote>
+<p>3.选择一个帐户或创建一个帐户；</p>
+</blockquote>
+<blockquote>
+<p>4.单击下拉菜单以创建属性；</p>
+</blockquote>
+<blockquote>
+<p>5.单击“网站”并添加您的站点名称和URL；</p>
+</blockquote>
+<blockquote>
+<p>6.选择您的行业；</p>
+</blockquote>
+<blockquote>
+<p>7.选择您的时区；</p>
+</blockquote>
+<blockquote>
+<p>8.单击获取跟踪ID；</p>
+</blockquote>
+<blockquote>
+<p>9.在您的网站上安装跟踪ID；</p>
+</blockquote>
+<h2 id="Google-Analytics术语介绍："><a href="#Google-Analytics术语介绍：" class="headerlink" title="Google Analytics术语介绍："></a><a href="https://analytics.google.com/">Google Analytics</a>术语介绍：</h2><blockquote>
+<p>1、帐户（Account ）-每个属性都位于仪表板中。 您可以在一个帐户中设置多个属性，也可以为不同的属性设置多个帐户。</p>
+</blockquote>
+<blockquote>
+<p>2、属性（Property）-你要追踪的网站或移动应用程序。</p>
+</blockquote>
+<blockquote>
+<p>3、id跟踪（Tracking ID） – 添加到您网站的唯一代码，允许Google Analytics跟踪它。</p>
+</blockquote>
+<blockquote>
+<p>4、转化（Conversion） – 访问转变为客户或潜在客户。</p>
+</blockquote>
+<blockquote>
+<p>5、渠道/流量来源（Channel/Traffic source ） – 显示您的流量来自哪里，例如来自其他网站，搜索引擎，社交媒体和电子邮件的推荐或链接。</p>
+</blockquote>
+<blockquote>
+<p>6、会话持续时间（Session duration ） – 访问者在您网站上停留的时长。</p>
+</blockquote>
+<blockquote>
+<p>7、跳出率（Bounce rate） – 仅查看单个页面然后离开的访问者百分比。</p>
+</blockquote>
+<blockquote>
+<p>8、事件（Event ）-特定访问者行为，例如访问者点击广告，观看或停止视频，下载文件等。</p>
+</blockquote>
+<blockquote>
+<p>9、着陆页（Landing page） – 访问者访问您网站时看到的第一页。</p>
+</blockquote>
+<blockquote>
+<p>10、自然搜索（Organic search ） – 通过搜索结果页面上的链接访问您网站的访问者。</p>
+</blockquote>
+<blockquote>
+<p>11、细分（Segment） – 一种过滤数据的方法，例如按访客的类别和类型。</p>
+</blockquote>
+<p>文章摘录于：<a href="https://www.idcspy.net/google-analytics">https://www.idcspy.net/google-analytics</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于如何HTML嵌入CSS样式（四种方法）</title>
     <url>/blog/2021/11/21/HTMLiscss/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在写网页时，明明自己会学css，但是不会使用，我在网上整理了一些关于HTML嵌入CSS样式的学习资料，该资料仅供自己和大家作为参考。</p>
@@ -378,24 +378,6 @@
         <tag>hexo</tag>
         <tag>blog</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello Word</title>
-    <url>/blog/2021/11/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>Markdown手册</title>
@@ -648,5 +630,23 @@ function test() &#123;
       <tags>
         <tag>blog</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello Word</title>
+    <url>/blog/2021/11/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
