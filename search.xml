@@ -632,19 +632,6 @@ function test() &#123;
       </tags>
   </entry>
   <entry>
-    <title>用git将本地代码上传到github</title>
-    <url>/blog/2021/11/22/git-github/</url>
-    <content><![CDATA[<p>这是我自己做博客网站时候，格外搭建个人主页所用到的指令，为了未来而奋斗，这几年我会重新学习初中和高中的知识，为以后的大学本科搭建好基础，加油！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init #文件中会多出一个.git 文件夹（可能会隐藏）</span><br><span class="line"></span><br><span class="line">运行git add . 命令 #上传本地所有文件</span><br><span class="line"></span><br><span class="line">git commit -m &quot;first commit&quot; #描述</span><br><span class="line"></span><br><span class="line">git remote add [命名] [项目地址] #添加快捷方式</span><br><span class="line"></span><br><span class="line">git push -u [命名] master #上传到github仓库</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello Word</title>
     <url>/blog/2021/11/18/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -661,5 +648,18 @@ function test() &#123;
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>用git将本地代码上传到github</title>
+    <url>/blog/2021/11/22/git-github/</url>
+    <content><![CDATA[<p>这是我自己做博客网站时候，格外搭建个人主页所用到的指令，为了未来而奋斗，这几年我会重新学习初中和高中的知识，为以后的大学本科搭建好基础，加油！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init #文件中会多出一个.git 文件夹（可能会隐藏）</span><br><span class="line"></span><br><span class="line">运行git add . 命令 #上传本地所有文件</span><br><span class="line"></span><br><span class="line">git commit -m &quot;first commit&quot; #描述</span><br><span class="line"></span><br><span class="line">git remote add [命名] [项目地址] #添加快捷方式</span><br><span class="line"></span><br><span class="line">git push -u [命名] master #上传到github仓库</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
   </entry>
 </search>
